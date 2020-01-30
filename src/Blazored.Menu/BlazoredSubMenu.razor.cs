@@ -24,7 +24,7 @@ namespace Blazored.Menu
                 var cssString = "blazored-sub-menu-header";
 
                 cssString += $" {Css}";
-                cssString += IsOpen ? " open" : "";
+                cssString += IsOpen ? " has-open" : "";
 
                 return cssString.Trim();
             }

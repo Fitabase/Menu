@@ -3,7 +3,7 @@
 @if (ChildContent != null)
 {
     <nav role="navigation" class="blazored-menu-container @Css">
-        <ul class="blazored-menu">
+        <ul class="menu">
             @ChildContent
         </ul>
     </nav>
@@ -11,7 +11,7 @@
 else
 {
     <nav role="navigation" class="blazored-menu-container @Css">
-        <ul class="blazored-menu">
+        <ul class="menu">
             @foreach (var item in MenuBuilder.Build(x => x.Position))
             {
                 @if (item.IsSubMenu && item.IsVisible)

@@ -4,14 +4,14 @@
     <li class="@CssString" disabled="@(!IsEnabled)">
         @if (HeaderTemplate != null)
         {
-            <span role="button" tabindex="0" @onclick="ToggleSubMenu" @onkeydown="KeyDownHandler">@HeaderTemplate <i>@Icon</i></span>
+            <a role="button" href="#" tabindex="0" @onclick="ToggleSubMenu" @onkeydown="KeyDownHandler" class="menu-link">@HeaderTemplate</a>
         }
         else
         {
             <span role="button" tabindex="0" @onclick="ToggleSubMenu" @onkeydown="KeyDownHandler">@Header <i>@Icon</i></span>
         }
 
-        <ul class="blazored-sub-menu">
+        <ul class="menu">
             @if (MenuTemplate != null)
             {
                 @MenuTemplate
