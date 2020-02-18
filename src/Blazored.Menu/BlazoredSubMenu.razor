@@ -4,7 +4,7 @@
     <li class="@CssString" disabled="@(!IsEnabled)">
         @if (HeaderTemplate != null)
         {
-            <a role="button" href="#" tabindex="0" @onclick="ToggleSubMenu" @onkeydown="KeyDownHandler" class="menu-link">@HeaderTemplate</a>
+            <a role="button" href="#" @onclick:preventDefault tabindex="0" @onclick="ToggleSubMenu" @onkeydown="KeyDownHandler" class="menu-link">@HeaderTemplate</a>
         }
         else
         {
